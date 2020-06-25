@@ -1,0 +1,68 @@
+@import '../../index.scss';
+
+.saiyan {
+    background: $mainBlue;
+    background-clip: border-box;
+    img{
+        width: 100%;
+        display: block;
+        min-height: 12rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .saiyan {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 1rem;
+    }
+}
+
+.img-container {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    padding: 5%;
+    top: -4%;
+    right: -4%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: $transitionInfo;
+    color: $mainOrange;
+    opacity: 0;
+}
+
+.img-container:hover .close-btn
+{
+    opacity: 1;
+}
+
+.saiyan-info {
+    padding:1rem 0.5rem;
+    h3 {
+        text-transform: uppercase;
+        color: $mainOrange;
+        margin-bottom: 0.5rem;
+    }
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    h5 {
+        text-transform: capitalize;
+        span {
+            color: $mainOrange;
+            font-size: 1.2rem;
+            cursor: pointer 
+            // brings the one finger choice
+            
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+    }
+}
